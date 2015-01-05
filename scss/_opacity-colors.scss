@@ -1,0 +1,18 @@
+/*Colors e opacity*/
+@mixin opacity($opacity: 0.5) {
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  -webkit-opacity: $opacity;
+  opacity: $opacity;
+  $opperc: $opacity * 100;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=${opperc})";
+  filter: "alpha(opacity=${opperc})";
+}
+
+@mixin rgba-color($colour, $alpha)
+{
+    $alphaColour: hsla(hue($colour), saturation($colour), lightness($colour), $alpha);
+     
+    color: $colour; // Fallback for older browsers
+    color: $alphaColour;
+}

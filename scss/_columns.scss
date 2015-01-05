@@ -1,0 +1,29 @@
+@mixin columns ($arguments) {
+    -webkit-columns: $arguments;
+    -moz-columns: $arguments;
+    columns: $arguments;
+    }
+@mixin column-gap ($arguments) {
+    -webkit-column-gap: $arguments;
+    -moz-column-gap: $arguments;
+    column-gap: $arguments;
+    }
+@mixin columns-gap ($arguments) {
+  @include column-gap($arguments);
+}
+@mixin column-rule ($arguments) {
+    -webkit-column-rule: $arguments;
+    -moz-column-rule: $arguments;
+    column-rule: $arguments;
+}
+@mixin columns-rule ($arguments) {
+  @include column-rule($arguments);
+}
+@mixin column-fill ($arguments) {
+    -webkit-column-fill: $arguments;
+    -moz-column-fill: $arguments;
+    column-fill: $arguments;
+}
+@mixin columns-fill ($arguments) {
+  @include column-fill($arguments);
+}
